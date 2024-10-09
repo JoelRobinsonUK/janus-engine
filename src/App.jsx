@@ -1,0 +1,25 @@
+import { useState } from "react";
+import StartNode from "./components/StartNode";
+import HeaderBar from "./components/HeaderBar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import StoryNode from "./components/StoryNode";
+import NotFound from "./components/404";
+
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+        <HeaderBar />
+        <main className="flex flex-col justify-center items-center grow h-full py-12">
+          <Routes>
+            <Route exact path="/" element={<StartNode />} />
+            <Route exact path="/gate/:id" element={<StoryNode />} />
+            <Route exact path="/*" element={<NotFound />} />
+          </Routes>
+        </main>
+      </BrowserRouter>
+    </>
+  );
+}
+
+export default App;
