@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>The Janus Engine</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="assets/januslogo.png" type="image/gif" sizes="16x16">
+        <meta name="description" content="The Janus Engine: A text based decision game.">
+        <meta name="keywords" content="HTML,Story,Games,Janus">
+    </head>
+    <body id="story">
+        <a href="index.html"><img src="assets/janustitle.png"></a>
+
+        <section id="1">
+            <h1>Gate 001-A</h1>
+            <p> The damage of human influence on the planet<br> 
+                grows worse every year, if immediate action<br>
+                is not taken the planet will be lost.<br>
+                <br>
+                Many say that society must push to cut off pollution,<br>
+                but there are those who feel it is too late<br>
+                and would rather invest in colonizing space.<br>
+                <br></p>
+            <button type="button" onclick="route('1', '2a', 'assets/london.jpg')">Clean Planet</button>
+            <button type="button" onclick="route('1', '2b', 'assets/orbit.jpg')">Space Exodus</button>
+        </section>
+
+        <section id="2a" style="display:none">
+            <h1>Gate 002-A</h1>
+            <p> The cleanup effort is not going well.<br>
+                Fossil fuels are being banned across the globe,<br>
+                but sea levels are rising and the population<br>
+                is becoming too dense.<br>
+                To avoid growing hostilities a viable<br>
+                solution to overcrowding must be found.<br> 
+                Will humanity build walls against the sea,<br>
+                or will they prepare to spread to new worlds?<br></p>
+            <button type="button" onclick="route('2a', '3a', 'assets/riot.jpg')">Build Walls</button>
+            <button type="button" onclick="route('2a', '2b', 'assets/orbit.jpg')">Space Exodus</button>
+        </section>
+
+        <section id="2b" style="display:none">
+            <h1>Gate 002-B</h1>
+            <p> The first colony ships are standing by in orbit.<br>
+                Final preparations are being made to take<br>
+                humanity into the stars.<br>
+                But which of two viable locations<br>
+                will become Earth's first off world colony?<br>
+                The Earth's closest neighbour Mars or <br>
+                Titan, Saturn's ocean moon?<br>
+                <br></p>
+            <button type="button" onclick="route('2b', '3b', 'assets/mars.jpg')">Mars</button>
+            <button type="button" onclick="route('2b', '3c', 'assets/titan.jpg')">Titan</button>
+        </section>
+
+        <section id="3a" style="display:none">
+            <h1>Gate 003-A</h1>
+            <p> The walls have been built, and while most<br> 
+                remain strong, those guarding the Americas from<br>
+                the advance of the Atlantic have failed, flooding<br>
+                much of the Eastern seaboard. The <a onclick="xOne()">Refederated<br>
+                States of America</a> have collapsed, chaos looms.<br>
+                Should the rest of the world take control, or<br>
+                should the Americans be left to their hedonism?<br>
+                <br></p>
+            <button type="button" onclick="route('3a', '4a', 'assets/pentagon.jpg')">Take Control</button>
+            <button type="button" onclick="route('3a', '4b', 'assets/chaos.jpg')">Leave Them Be</button>
+        </section>
+
+        <section id="3b" style="display:none">
+            <h1>Gate 003-B</h1>
+            <p> <br>The red planet offers an number of<br>
+                locations for a colony of this size.<br>
+                Two in particular stand out to the<br>
+                humans: an underground glacier that will allow<br>
+                for steady growth, and the natural<br>
+                protection of the Schiaparelli crater<br>
+                <br></p>
+            <button type="button" onclick="route('3b', '4c', 'assets/mars.jpg')">Glacier</button>
+            <button type="button" onclick="route('3b', '4d', 'assets/mars.jpg')">Crater</button>
+        </section>
+
+        <section id="3c" style="display:none">
+            <h1>Gate 003-C</h1>
+            <p> <br>Colonising Titan proves a challenge,<br>
+                the colony ships are converted into<br>
+                submarine cities in Titan’s vast sea.<br> 
+                Do the inhabitants explore their<br>
+                ocean home or focus on expanding their cities?<br>
+                <br><br></p>
+            <button type="button" onclick="route('3c', '4e', 'assets/titan.jpg')">Explore</button>
+            <button type="button" onclick="route('3c', '4f', 'assets/titan.jpg')">Expand</button>
+        </section>
+
+        <section id="4a" style="display:none">
+            <h1>Gate 004-A</h1>
+            <p> <br>The citizens of the RSA resist foreign<br>
+                leadership. A number of attacks on key<br>
+                locations are followed by a call for freedom.<br>
+                Will the foreign powers withdraw<br>
+                or force America to follow?<br>
+                <br><br></p>
+            <button type="button" onclick="route('4a', '5a', 'assets/volcano.jpg')">Withdraw</button>
+            <button type="button" onclick="route('4a', '5b', 'assets/wall.jpg')">Crack Down</button>
+        </section>
+
+        <section id="4b" style="display:none">
+            <h1>Gate 004-B</h1>
+            <p> <br>The leaders of the defunct nation flee for Europe.<br> 
+                In their absence a number of <a onclick="xTwo()" >malcontent<br>
+                groups</a> seize the RSA’s nuclear arsenal.<br>
+                They demand that Canada and Mexico withdraw,<br> 
+                allowing them to annex the empty land. Do they?<br>
+                <br><br></p>
+            <button type="button" onclick="route('4b', '5c', 'assets/nuke.jpg')">Refuse</button>
+            <button type="button" onclick="route('4b', '5d', 'assets/cell.jpg')">Withdraw</button>
+        </section>
+
+        <section id="4c" style="display:none">
+            <h1>Gate 004-C</h1>
+            <p> <br>The glacier provides strong growth<br>
+                to the colony. With such a firm basis,<br>
+                should humans expand on their current<br>
+                colony or prepare to send out<br>
+                new explorers?<br>
+                <br><br></p>
+            <button type="button" onclick="route('4c', '5e', 'assets/mars.jpg')">Expand</button>
+            <button type="button" onclick="route('4c', '6d', 'assets/mars.jpg')">Explore</button>
+        </section>
+
+        <section id="4d" style="display:none">
+            <h1>Gate 004-D</h1>
+            <p> <br>The Schiaparelli colony has discovered a<br>
+                <a onclick="xThree()">strange mineral</a>, it is found to be a highly<br>
+                effective fuel source, however when<br>
+                processed it also acts as a treatment that<br> 
+                greatly reduces human aging.<br>
+                <br><br></p>
+            <button type="button" onclick="route('4d', '6d', 'assets/mars.jpg')">Use as Fuel</button>
+            <button type="button" onclick="route('4d', '5f', 'assets/mars.jpg')">Process Treatment</button>
+        </section>
+
+        <section id="4e" style="display:none">
+            <h1>Gate 004-E</h1>
+            <p> <br>Exploring the oceans has caught<br>
+                the attention of a <a onclick="xFour()">giant indigenous<br>
+                lifeform.</a><br>
+                As they approach the human settlements<br> 
+                the argument over whether to fight them<br> 
+                off or leave them alone rages.<br>
+                <br></p>
+            <button type="button" onclick="route('4e', '5g', 'assets/titan.jpg')">Fight Them Off</button>
+            <button type="button" onclick="route('4e', '5h', 'assets/titan.jpg')">Leave Them Be</button>
+        </section>
+
+        <section id="4f" style="display:none">
+            <h1>Gate 004-F</h1>
+            <p> <br>Early attempts to expand the cities of Titan<br> 
+                lead to several small disasters.<br> 
+                While many argue that the population should<br> 
+                persist in making titan their home, others<br>
+                argue that they should relocate<br>
+                before they lose their chance.<br>
+                <br></p>
+            <button type="button" onclick="route('4f', '5i', 'assets/jupiter.jpg')">Persist</button>
+            <button type="button" onclick="route('4f', '5j', 'assets/jupiter.jpg')">Relocate</button>
+        </section>
+
+        <section id="5a" style="display:none">
+            <h1>Gate 005-A</h1>
+            <p> <br>The foreign powers withdraw from the American<br> 
+                continent. A few months later the Yellowstone<br> 
+                volcano erupts, wiping out life in the<br> 
+                Americas and threatening the rest of the world.<br> 
+                Will the humans leave their home for<br>
+                the safety of space, or persist on Earth?<br>
+                <br></p>
+            <button type="button" onclick="route('5a', '2b', 'assets/orbit.jpg')">Space</button>
+            <button type="button" onclick="route('5a', '6a', 'assets/cell.jpg')">Earth</button>
+        </section>
+
+        <section id="5b" style="display:none">
+            <h1>Gate 005-B</h1>
+            <p> <br>By remaining in the Americas many nations<br> 
+                lose their military force to endless<br> 
+                resistance.<br>
+                In a bid to take advantage Russia marches<br> 
+                on undefended Europe. Do the people submit<br> 
+                to Russia or resist their invasion?<br>
+                <br></p>
+            <button type="button" onclick="route('5b', '6b', 'assets/moscow.jpg')">Submit</button>
+            <button type="button" onclick="route('5b', '6c', 'assets/moscow.jpg')">Resist</button>
+        </section>
+
+        <section id="5c" style="display:none">
+            <h1>Gate 005-C</h1>
+            <p> <br>In their desperation, the American militias<br> 
+                make good on their threat.<br>
+                The launch of 47 nuclear weapons is met by<br> 
+                the full atomic force of the rest of the world.<br> 
+                <br>
+                When the dust settles, humanity is no more.<br>
+                <br></p>
+            <button type="button" onclick="window.location.href='ending_bad.html'">[Disengage Engine]</button>
+        </section>
+
+        <section id="5d" style="display:none">
+            <h1>Gate 005-D</h1>
+            <p> The people of Mexico travel into the south,<br> 
+                while those from Canadians flee to Europe.<br>
+                Unbeknownst to all, the Canadian refugees bring<br>
+                a super virus with them, cutting through<br>
+                most of the population within weeks.<br>
+                Those that remain live difficult,<br>
+                violent lives forever more.<br>
+                <br></p>
+            <button type="button" onclick="window.location.href='ending_bad.html'">[Disengage Engine]</button>
+        </section>
+
+        <section id="5e" style="display:none">
+            <h1>Gate 005-E</h1>
+            <p> <br><br>Though the colony has grown into a haven,<br>
+                many feel that it is stagnating the advances<br>
+                of mankind. Should they strive to explore<br>
+                the stars or work on a means of restoring Earth?<br>
+                <br><br></p>
+            <button type="button" onclick="route('5e', '6d', 'assets/mars.jpg')">Explore</button>
+            <button type="button" onclick="route('5e', '6e', 'assets/mars.jpg')">Restore</button>
+        </section>
+
+        <section id="5f" style="display:none">
+            <h1>Gate 005-F</h1>
+            <p> <br>Humans now routinely live to be over 200 years old,<br>
+                however the Martian moon Phobos is fracturing from<br>
+                gravitational stress and will soon break apart.<br> 
+                Do humans attempt to relocate to another mars colony or<br>
+                take the chance of returning to earth?<br>
+                <br><br></p>
+            <button type="button" onclick="route('5f', '6f', 'assets/mars.jpg')">Relocate</button>
+            <button type="button" onclick="route('5f', '6g', 'assets/mars.jpg')">Return to Earth</button>
+        </section>
+
+        <section id="5g" style="display:none">
+            <h1>Gate 005-G</h1>
+            <p> <br><br>Attacking the cephaloforms proves a grave mistake.<br> 
+                Their full size rises from the depths of Titan<br> 
+                and their colossal limbs crush the human cities.<br> 
+                The last of human race drown in less than a day.<br>
+                <br><br></p>
+            <button type="button" onclick="window.location.href='ending_bad.html'">[Disengage Engine]</button>
+        </section>
+
+        <section id="5h" style="display:none">
+            <h1>Gate 005-H</h1>
+            <p> <br>The cephaloforms prove to be peaceful, and their<br>
+                presence draws other marine life toward the city.<br> 
+                These creatures provide nutrition, advances in<br>
+                medicine, and a clean form of bio fuel.<br> 
+                The underwater cities of Titan run peacefully for<br>
+                thousands of years.<br>
+                <br></p>
+            <button type="button" onclick="window.location.href='ending_good.html'">[Disengage Engine]</button>
+        </section>
+
+        <section id="5i" style="display:none">
+            <h1>Gate 005-I</h1>
+            <p> <br>Further attempts to expand on Titan become<br>
+                costly as humans slowly run out of resources.<br> 
+                <br>
+                The hulls of the cities corrode and flood long<br>
+                after mankind has died of sickness and malnourishment.<br>
+                <br><br></p>
+            <button type="button" onclick="window.location.href='ending_bad.html'">[Disengage Engine]</button>
+        </section>
+
+        <section id="5j" style="display:none">
+            <h1>Gate 005-J</h1>
+            <p> <br>Leaving Titan was a wise choice,<br>
+                new readings indicated that the Jovian<br>
+                moons: Io and Callisto,<br>
+                are viable for colonisation.<br> 
+                Where should humanity rest its hopes?<br>
+                <br><br></p>
+            <button type="button" onclick="route('5j', '6h', 'assets/jupiter.jpg')">Callisto</button>
+            <button type="button" onclick="route('5j', '6i', 'assets/jupiter.jpg')">Io</button>
+        </section>
+
+        <section id="6a" style="display:none">
+            <h1>Gate 006-A</h1>
+            <p> <br>North Korea attempts to secure more growing<br> 
+                space for itself by unleashing a new bioweapon.<br>
+                The <a onclick="xFive()">Kosong Ni virus</a> quickly becomes<br> 
+                uncontrollable, wiping out entire nations each day.<br>
+                Within a month the last survivors<br>
+                succumb to their illness.<br>
+                <br></p>
+            <button type="button" onclick="window.location.href='ending_bad.html'">[Disengage Engine]</button>
+        </section>
+
+        <section id="6b" style="display:none">
+            <h1>Gate 006-B</h1>
+            <p> By submitting to Russian control the population<br>
+                of Earth is resigned to a steady decay in<br>
+                civilisation and environment. By the end of the<br> 
+                22nd Century the Russian Empire of Earth has worn<br> 
+                the planet down to a wasteland. Human numbers<br>
+                dwindle until the citizens of the last habitable city:<br> 
+                Moscow, carry out a mass suicide<br>
+                <br></p>
+            <button type="button" onclick="window.location.href='ending_bad.html'">[Disengage Engine]</button>
+        </section>
+
+        <section id="6c" style="display:none">
+            <h1>Gate 006-C</h1>
+            <p> <br>Resistance has led to an opportunity:<br>
+                an incursion into the Russian motherland will<br>
+                allow a large number of people to escape Earth in<br>
+                the space fleet being built there; alternatively<br>
+                a number of attacks on Russian weapon depots may<br>
+                destabilise the Empire's grip on their annexes.<br>
+                <br></p>
+            <button type="button" onclick="route('6c', '2b', 'assets/orbit.jpg')">Escape</button>
+            <button type="button" onclick="route('6c', '7a', 'assets/nuke.jpg')">Attack</button>
+        </section>
+
+        <section id="6d" style="display:none">
+            <h1>Gate 006-D</h1>
+            <p> <br>Lengthly research has led to the development<br>
+                of a <a onclick="xSix()">highly advanced propulsion system</a><br>
+                Using this techology humanity can leave the<br>
+                Solar System. Two exoplanets are being considered.<br>
+                Should sights be set on the nearby Proxima Centauri b<br>
+                or the more ambitious Glieses 876 d?<br>
+                <br></p>
+            <button type="button" onclick="route('6d', '7b', 'assets/centauri.jpg')">Proxima Centauri b</button>
+            <button type="button" onclick="route('6d', '7c', 'assets/glieses.jpg')">Glieses 876 d</button>
+        </section>
+
+        <section id="6e" style="display:none">
+            <h1>Gate 006-E</h1>
+            <p> <br>A major breakthrough in carbon redistribution<br>
+                techlonogy means that the Earth's air can be<br>
+                cleansed, while a newly developed sea trawler can<br>
+                can depolute it's oceans efficiently. But the colony<br>
+                only has enough resources to send one system in advance.<br>
+                <br><br></p>
+            <button type="button" onclick="route('6e', '7d', 'assets/mars.jpg')">Clean Air</button>
+            <button type="button" onclick="route('6e', '7e', 'assets/mars.jpg')">Depolute Sea</button>
+        </section>
+
+        <section id="6f" style="display:none">
+            <h1>Gate 006-F</h1>
+            <p> <br>While evacuating the crater colony many humans<br>
+                are killed by debris from Phobos, with supplies<br>
+                also being lost the survivors are unable to esablish<br>
+                a new outpost.<br>
+                <br>
+                Humanity dwindles away to nothing in the Martian desert.<br>
+                <br></p>
+            <button type="button" onclick="window.location.href='ending_bad.html'">[Disengage Engine]</button>
+        </section>
+
+        <section id="6g" style="display:none">
+            <h1>Gate 006-G</h1>
+            <p> <br>The colony ships escape the Martian surface<br>
+                just in time to avoid the barrage of moon rocks.<br>
+                As they make the return journey to Earth the<br>
+                humans must decide whether their limited resources<br>
+                will be used to resettle on of their homeworld's<br>
+                ancient cities or to build a new settlement.<br>
+                <br></p>
+
+            <button type="button" onclick="route('6g', '7f', 'assets/mars.jpg')">Resettle a City</button>
+            <button type="button" onclick="route('6g', '7g', 'assets/mars.jpg')">Build an Outpost</button>
+
+        </section>
+
+        <section id="6h" style="display:none">
+            <h1>Gate 006-H</h1>
+            <p> <br>Humanity journeys safely to Callisto.<br>
+                Upon arrival they discover the moon is rich<br>
+                in metals and minerals.<br>
+                With their newfound wealth humanity builds a<br>
+                a civilisation that lasts more than<br>
+                two thousand years.<br>
+                <br></p>
+            <button type="button" onclick="window.location.href='ending_good.html'">[Disengage Engine]</button>
+        </section>
+
+        <section id="6i" style="display:none">
+            <h1>Gate 006-I</h1>
+            <p> Arriving on Io the humans discover the remains<br>
+                of an ancient spacefaring civilisation.<br>
+                An outpost is established and the technology of<br>
+                this lost people slowly comes to be understood.<br>
+                <br>
+                In time, humanity uses this knowledge to travel<br>
+                among the stars themselves.<br>
+                <br></p>
+            <button type="button" onclick="window.location.href='ending_good.html'">[Disengage Engine]</button>
+        </section>
+
+        <section id="7a" style="display:none">
+            <h1>Gate 007-A</h1>
+            <p> <br>Some of the weapon depots the resistance<br>
+                destroy contain prototype weapons of mass<br>
+                destruction called Desolation Drives.<br>
+                The detonation of these devices leads to the<br>
+                combustion of the Earth's atmosphere.<br>
+                <br><br></p>
+            <button type="button" onclick="window.location.href='ending_bad.html'">[Disengage Engine]</button>
+        </section>
+
+        <section id="7b" style="display:none">
+            <h1>Gate 007-B</h1>
+            <p> <br>This adventure into the deep vacuum pays off.<br>
+                On one of the planets orbitting Alpha Centauri<br>
+                humanity makes first contact with its alien<br>
+                neighbours. New Earth is established on Centauri's<br>
+                moon, with Humans and Centaurs becoming the first<br>
+                peoples of the Galactic Union of Planets.<br>
+                <br></p>
+            <button type="button" onclick="window.location.href='ending_true.html'">[Disengage Engine]</button>
+        </section>
+
+        <section id="7c" style="display:none">
+            <h1>Gate 007-C</h1>
+            <p> <br>The journey to far of Glieses is fraught<br>
+                with danger. One by one the colony ships<br>
+                are lost to the hazards of deep space.<br>
+                <br>
+                The remains of humanity are discovered by<br>
+                starfarers nearly 200 years later.<br>
+                <br></p>
+            <button type="button" onclick="window.location.href='ending_bad.html'">[Disengage Engine]</button>
+        </section>
+
+        <section id="7d" style="display:none">
+            <h1>Gate 007-D</h1>
+            <p> <br>The machine reacts unexpectedly to<br>
+                particulates in the atmosphere, causing<br>
+                a massive combustion event that scorches the<br>
+                landmasses of Earth.<br>
+                Left with no destination and limited resources<br>
+                humans continue to slowly expand on Mars.<br>
+                <br></p>
+            <button type="button" onclick="window.location.href='ending_bad.html'">[Disengage Engine]</button>
+        </section>
+
+        <section id="7e" style="display:none">
+            <h1>Gate 007-E</h1>
+            <p> <br>Removing the masses of waste from Earth's<br>
+                waters begins a regeneration of the planet's<br>
+                ecosystem.<br>
+                After 100 years it is again hospitable to humans<br>
+                the colonists return home and begin rebuilding their<br>
+                home, this time with greater respect for the blue planet.<br>
+                <br></p>
+            <button type="button" onclick="window.location.href='ending_good.html'">[Disengage Engine]</button>
+        </section>
+
+        <section id="7f" style="display:none">
+            <h1>Gate 007-F</h1>
+            <p> <br>Damage to the old cities is significant<br>
+                but in time humanity is able to restore them.<br>
+                However with old techology back in their hands<br>
+                they quickly fall back into habits that caused<br>
+                their greatest problems to begin with.<br>
+                <br><br></p>
+            <button type="button" onclick="window.location.href='ending_bad.html'">[Disengage Engine]</button>
+        </section>
+
+        <section id="7g" style="display:none">
+            <h1>Gate 007-G</h1>
+            <p> <br>This new city, while small, makes use of the<br>
+                technological advances that humans made on Mars.<br>
+                This advantage allows them to expand back across<br>
+                their planet.<br>
+                Building a better future day by day.<br>
+                <br><br></p>
+            <button type="button" onclick="window.location.href='ending_good.html'">[Disengage Engine]</button>
+        </section>
+
+        <aside>
+            <audio id="music" autoplay ; loop>
+                <source src="assets/sounds/storyAmbient.mp3" type="audio/mpeg" >
+            </audio>
+            <button id="volup" type="button" onclick="volUp()"></button><br>
+            <button id="voldown" type="button" onclick="volDown()"></button><br>
+            <button id="mute" type="button" onclick="mute()"></button>
+        </aside>
+
+        <audio id="beep">
+            <source src="assets/sounds/hover.wav" type="audio/wav">
+        </audio>
+
+        <script src="script.js"></script>
+    </body>
+</html>

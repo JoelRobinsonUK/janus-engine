@@ -17,4 +17,24 @@ export const storyNodes = {
       },
     ],
   },
+  "2a": {
+    title: "Gate 002-A",
+    body: [
+      "The cleanup effort is not going well.",
+      "Fossil fuels are being banned across the globe, but sea levels are rising and the population is becoming too dense.",
+      "To avoid growing hostilities a viable solution to overcrowding must be found.",
+      "Will humanity build walls against the sea, or will they prepare to spread to new worlds?",
+    ],
+    img: "https://images.pexels.com/photos/1257860/pexels-photo-1257860.jpeg",
+    options: [
+      {
+        id: "2a",
+        text: "Clean Planet",
+      },
+      {
+        id: "2b",
+        text: "Space Exodus",
+      },
+    ],
+  },
 };
