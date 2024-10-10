@@ -1,11 +1,11 @@
 export const storyNodes = {
-  1: {
+  "1": {
     title: "Gate 001-A",
     body: [
       "The damage of human influence on the planet grows worse every year, if immediate action is not taken the planet will be lost.",
       "Many say that society must push to cut off pollution, but there are those who feel it is too late and would rather invest in colonizing space.,",
     ],
-    img: "https://images.pexels.com/photos/1257860/pexels-photo-1257860.jpeg",
+    img: "galaxy.jpg",
     options: [
       {
         id: "2a",
@@ -25,11 +25,11 @@ export const storyNodes = {
       "To avoid growing hostilities a viable solution to overcrowding must be found.",
       "Will humanity build walls against the sea, or will they prepare to spread to new worlds?",
     ],
-    img: "https://images.pexels.com/photos/1257860/pexels-photo-1257860.jpeg",
+    img: "london.jpg",
     options: [
       {
-        id: "2a",
-        text: "Clean Planet",
+        id: "3a",
+        text: "Build Walls",
       },
       {
         id: "2b",

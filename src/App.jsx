@@ -3,7 +3,7 @@ import StartNode from "./components/StartNode";
 import HeaderBar from "./components/HeaderBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import StoryNode from "./components/StoryNode";
-import NotFound from "./components/404";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<StartNode />} />
             <Route exact path="/gate/:id" element={<StoryNode />} />
-            <Route exact path="/*" element={<NotFound />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
       </BrowserRouter>
