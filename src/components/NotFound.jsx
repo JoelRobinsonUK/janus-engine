@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const NotFound = () => {
   return (
     <div className="w-3/6 grow bg-antiflash-200 rounded-xl grid grid-cols-6 overflow-hidden">
