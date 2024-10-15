@@ -19,7 +19,38 @@ const StoryNode = () => {
 
   return (
     <>
-      <div className="w-3/6 grow bg-antiflash-200 rounded-xl grid grid-cols-5 overflow-hidden">
+      {storyNode && (
+        <div className="grow bg-antiflash-200 rounded-xl grid grid-cols-6 overflow-hidden items-center">
+          <div className="col-span-2">
+            <img
+              className="h-full object-cover"
+              src={"/images/" + storyNode.img}
+              alt=""
+            />
+          </div>
+          <div className="col-span-4 px-8">
+            <div className="flex flex-col max-w-screen-pl items-stretch gap-8">
+              <h2 className="text-2xl font-heading font-semibold">Gate 000</h2>
+              {storyNode.body.map((text) => (
+                <p className="pb-4">{text}</p>
+              ))}
+              <div className="grow flex">
+                {storyNode.options.map((option) => (
+                  <Link
+                    replace
+                    to={"/gate/" + option.id}
+                    className="grow bg-peacock-500 rounded-lg text-antiflash-200 py-3 text-center"
+                  >
+                    {option.text}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      {storyNode.extra && <ExtraInfoDialog id={id} extra={storyNode.extra} />}
+      {/* <div className="w-3/6 grow bg-antiflash-200 rounded-xl grid grid-cols-5 overflow-hidden">
         {storyNode && (
           <>
             <div className="col-span-2">
@@ -53,7 +84,7 @@ const StoryNode = () => {
             )}
           </>
         )}
-      </div>
+      </div> */}
     </>
   );
 };

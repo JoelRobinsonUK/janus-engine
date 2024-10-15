@@ -10,7 +10,7 @@ function App() {
     <>
       <BrowserRouter>
         <HeaderBar />
-        <main className="flex flex-col justify-center items-center h-full py-12">
+        <main className="flex flex-col justify-center items-center h-full">
           <Routes>
             <Route exact path="/" element={<StartNode />} />
             <Route exact path="/gate/:id" element={<StoryNode />} />
