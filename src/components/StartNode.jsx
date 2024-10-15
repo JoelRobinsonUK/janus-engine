@@ -2,16 +2,15 @@ import { Link } from "react-router-dom";
 
 const StartNode = () => {
   return (
-    <div className="grow bg-antiflash-200 grid grid-cols-6 overflow-hidden items-center">
-      <div className="col-span-2">
+    <div className="grow flex items-stretch">
+      <div className="max-w-screen-pp bg-teal-300">
         <img
           className="h-full object-cover"
           src="https://images.pexels.com/photos/1257860/pexels-photo-1257860.jpeg"
           alt=""
         />
       </div>
-      <div className="col-span-4 px-8">
-        <div className="flex flex-col max-w-screen-pl items-stretch gap-8">
+      <div className="grow px-8 flex flex-col max-w-prose justify-center gap-8">
           <h2 className="text-2xl font-heading font-semibold">Gate 000</h2>
           <p>
             Pilot, welcome to the the Janus Engine, a mechanism used by the
@@ -19,7 +18,7 @@ const StartNode = () => {
             have been assigned the human race, your goal is to guide them to the
             end of the 3rd millenium.
           </p>
-          <div className="grow flex">
+          <div className="flex">
             <Link
               to={"/gate/1"}
               className="grow bg-peacock-500 rounded-lg text-antiflash-200 py-3 text-center"
@@ -27,7 +26,6 @@ const StartNode = () => {
               Begin
             </Link>
           </div>
-        </div>
       </div>
     </div>
   );

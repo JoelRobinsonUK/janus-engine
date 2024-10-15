@@ -20,36 +20,37 @@ const StoryNode = () => {
   return (
     <>
       {storyNode && (
-        <div className="grow bg-antiflash-200 rounded-xl grid grid-cols-6 overflow-hidden items-center">
-          <div className="col-span-2">
+        <div className="grow flex items-stretch">
+          <div className="max-w-screen-pp bg-teal-300">
             <img
               className="h-full object-cover"
               src={"/images/" + storyNode.img}
               alt=""
             />
           </div>
-          <div className="col-span-4 px-8">
-            <div className="flex flex-col max-w-screen-pl items-stretch gap-8">
-              <h2 className="text-2xl font-heading font-semibold">Gate 000</h2>
+          <div className="grow px-8 flex flex-col max-w-prose justify-center gap-8">
+              <h2 className="text-2xl font-heading font-semibold">{storyNode.title}</h2>
+              <div>
               {storyNode.body.map((text) => (
-                <p className="pb-4">{text}</p>
+                <p className="pb-2">{text}</p>
               ))}
-              <div className="grow flex">
-                {storyNode.options.map((option) => (
+              </div>
+              <div className="flex gap-4">
+              {storyNode.options.map((option) => (
                   <Link
                     replace
                     to={"/gate/" + option.id}
-                    className="grow bg-peacock-500 rounded-lg text-antiflash-200 py-3 text-center"
+                    className="grow bg-peacock-500 rounded-lg text-antiflash-200 py-3 text-center basis-full"
                   >
                     {option.text}
                   </Link>
                 ))}
               </div>
-            </div>
           </div>
+          {storyNode.extra && <ExtraInfoDialog id={id} extra={storyNode.extra} />}
         </div>
       )}
-      {storyNode.extra && <ExtraInfoDialog id={id} extra={storyNode.extra} />}
+      
       {/* <div className="w-3/6 grow bg-antiflash-200 rounded-xl grid grid-cols-5 overflow-hidden">
         {storyNode && (
           <>

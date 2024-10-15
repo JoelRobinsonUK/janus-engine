@@ -12,7 +12,7 @@ const ExtraInfoDialog = ({ id, extra }) => {
   return (
     <div
       className={
-        "absolute bottom-4 right-4 w-1/6 bg-antiflash-200 rounded-xl overflow-hidden " +
+        "absolute bottom-4 right-4 w-1/6 bg-antiflash-400 dark:bg-notblack-400 rounded-xl overflow-hidden " +
         display
       }
     >
