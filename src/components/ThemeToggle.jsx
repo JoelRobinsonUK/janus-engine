@@ -4,7 +4,7 @@ import { faLightbulb as lightOff } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ThemeToggle = () => {
-  const [themeToggle, setThemeToggle] = useState();
+  const [themeToggle, setThemeToggle] = useState(lightOff);
   let currentTheme = document.querySelector("html").getAttribute("data-theme");
 
   useEffect(() => {

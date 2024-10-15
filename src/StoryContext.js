@@ -245,4 +245,72 @@ export const storyNodes = {
       },
     ],
   },
+  "5a": {
+    title: "Gate 005-A",
+    body: [
+      "The foreign powers withdraw from the American continent.",
+      "A few months later the Yellowstone volcano erupts, wiping out life in the Americas and threatening the rest of the world.", 
+      "Will the humans leave their home for the safety of space, or persist on Earth?"
+    ],
+    img: "volcano.jpg",
+    options: [
+      {
+        id: "2b",
+        text: "Space",
+      },
+      {
+        id: "6a",
+        text: "Earth",
+      },
+    ],
+  },
+  "5b": {
+    title: "Gate 005-B",
+    body: [
+      "By remaining in the Americas many nations lose their military force to endless resistance.",
+      "In a bid to take advantage Russia marches on undefended Europe.",
+      "Do the people submit to Russia or resist their invasion?",
+    ],
+    img: "wall.jpg",
+    options: [
+      {
+        id: "6b",
+        text: "Submit",
+      },
+      {
+        id: "6c",
+        text: "Resist",
+      },
+    ],
+  },
+  "5c": {
+    title: "Gate 005-C",
+    body: [
+      "In their desperation, the American militias make good on their threat.",
+      "The launch of 47 nuclear weapons is met by the full atomic force of the rest of the world.",
+      "When the dust settles, humanity is no more.",
+    ],
+    img: "nuke.jpg",
+    options: [
+      {
+        id: "ending/bad",
+        text: "End",
+      },
+    ],
+  },
+  "5d": {
+    title: "Gate 005-D",
+    body: [
+      "The people of Mexico travel into the south, while those from Canadians flee to Europe.",
+      "Unbeknownst to all, the Canadian refugees bring a super virus with them, cutting through most of the population within weeks.",
+      "Those that remain live difficult, violent lives forever more.",
+    ],
+    img: "cell.jpg",
+    options: [
+      {
+        id: "ending/bad",
+        text: "End",
+      },
+    ],
+  },
 };

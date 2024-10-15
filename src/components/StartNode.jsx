@@ -6,7 +6,7 @@ const StartNode = () => {
       <div className="max-w-screen-pp bg-teal-300">
         <img
           className="h-full object-cover"
-          src="https://images.pexels.com/photos/1257860/pexels-photo-1257860.jpeg"
+          src="https://www.worldatlas.com/upload/dc/2a/1d/shutterstock-557777728.jpg"
           alt=""
         />
       </div>
@@ -20,7 +20,7 @@ const StartNode = () => {
           </p>
           <div className="flex">
             <Link
-              to={"/gate/1"}
+              to={"/1"}
               className="grow bg-peacock-500 rounded-lg text-antiflash-200 py-3 text-center"
             >
               Begin

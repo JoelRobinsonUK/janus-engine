@@ -39,7 +39,7 @@ const StoryNode = () => {
               {storyNode.options.map((option) => (
                   <Link
                     replace
-                    to={"/gate/" + option.id}
+                    to={"/" + option.id}
                     className="grow bg-peacock-500 rounded-lg text-antiflash-200 py-3 text-center basis-full"
                   >
                     {option.text}
