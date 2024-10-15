@@ -25,6 +25,7 @@ const HeaderBar = () => {
         <h1 className="text-3xl">The Janus Engine</h1>
       </Link>
       <audio
+        className="rounded-full"
         src={source}
         controls
         autoPlay
