@@ -20,8 +20,8 @@ const StoryNode = () => {
   return (
     <>
       {storyNode && (
-        <div className="grow flex items-stretch">
-          <div className="max-w-screen-sm bg-teal-300">
+        <div className="grow flex flex-col items-stretch lg:flex-row">
+          <div className="max-h-96 lg:max-w-screen-sm lg:max-h-full bg-teal-300">
             <img
               className="h-full object-cover"
               src={"/images/" + storyNode.img}
@@ -29,28 +29,32 @@ const StoryNode = () => {
             />
           </div>
           <div className="grow px-8 flex flex-col max-w-prose justify-center gap-8">
-              <h2 className="text-2xl font-heading font-semibold">{storyNode.title}</h2>
-              <div>
+            <h2 className="text-2xl font-heading font-semibold">
+              {storyNode.title}
+            </h2>
+            <div>
               {storyNode.body.map((text) => (
                 <p className="pb-2">{text}</p>
               ))}
-              </div>
-              <div className="flex gap-4">
+            </div>
+            <div className="flex gap-4">
               {storyNode.options.map((option) => (
-                  <Link
-                    replace
-                    to={"/" + option.id}
-                    className="grow bg-peacock-500 rounded-lg text-antiflash-200 py-3 text-center basis-full"
-                  >
-                    {option.text}
-                  </Link>
-                ))}
-              </div>
+                <Link
+                  replace
+                  to={"/play/" + option.id}
+                  className="grow bg-peacock-500 rounded-lg text-antiflash-200 py-3 text-center basis-full"
+                >
+                  {option.text}
+                </Link>
+              ))}
+            </div>
           </div>
-          {storyNode.extra && <ExtraInfoDialog id={id} extra={storyNode.extra} />}
+          {storyNode.extra && (
+            <ExtraInfoDialog id={id} extra={storyNode.extra} />
+          )}
         </div>
       )}
-      
+
       {/* <div className="w-3/6 grow bg-antiflash-200 rounded-xl grid grid-cols-5 overflow-hidden">
         {storyNode && (
           <>
