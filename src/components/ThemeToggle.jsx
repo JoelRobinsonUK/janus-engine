@@ -27,7 +27,7 @@ const ThemeToggle = () => {
     <>
       <button
         onClick={(e) => handleToggle(e)}
-        className="bg-antiflash-200 dark:bg-notblack-300 text-notblack-300 dark:text-antiflash-200 h-full aspect-square rounded-full"
+        className="bg-antiflash-200 dark:bg-notblack-300 text-notblack-300 dark:text-antiflash-200 h-full aspect-square rounded-full hover:animate-wiggle"
       >
         <FontAwesomeIcon className="text-2xl inline" icon={themeToggle} />
       </button>

@@ -3,14 +3,6 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: ['selector', '[data-theme="dark"]'],
   theme: {
-    screens: {
-      pp: "480px",
-      pl: "768px",
-      tp: "834px",
-      tl: "1024px",
-      lp: "1280px",
-      dsk: "1440px",
-    },
     colors: {
       matrix: {
         100: "#94FFD0",
@@ -52,6 +44,25 @@ export default {
       heading: ["Space Grotesk", "sans-serif"],
       body: ["Open Sans", "sans-serif"],
     },
+    extend: {
+      screens: {
+        pp: "480px",
+        pl: "768px",
+        tp: "834px",
+        tl: "1024px",
+        lp: "1280px",
+        dsk: "1440px",
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-8deg)' },
+          '50%': { transform: 'rotate(8deg)' },
+        }
+      },
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
+      }
+    }
   },
   plugins: [],
 };

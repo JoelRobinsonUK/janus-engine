@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import ExtraInfoDialog from "./ExtraInfoDialog";
 
 const StoryNode = () => {
-  const { id } = useParams();
+  const { id = 0 } = useParams();
   const navigate = useNavigate();
   const [storyNode, setStoryNode] = useState();
 
@@ -21,7 +21,7 @@ const StoryNode = () => {
     <>
       {storyNode && (
         <div className="grow flex items-stretch">
-          <div className="max-w-screen-pp bg-teal-300">
+          <div className="max-w-screen-sm bg-teal-300">
             <img
               className="h-full object-cover"
               src={"/images/" + storyNode.img}
