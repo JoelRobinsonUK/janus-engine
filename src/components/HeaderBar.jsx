@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import ThemeToggle from "./ThemeToggle";
+import ThemeToggle from "./buttons/ThemeToggle";
+import SoundToggle from "./buttons/SoundToggle";
 
 const HeaderBar = () => {
   const { pathname } = useLocation();
@@ -10,6 +11,7 @@ const HeaderBar = () => {
       <Link to={"/"} className="grow flex">
         <h1 className="text-4xl">The Janus Engine</h1>
       </Link>
+      <SoundToggle />
       <ThemeToggle />
     </header>
   );

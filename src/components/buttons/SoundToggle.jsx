@@ -1,0 +1,20 @@
+import { useState } from "react";
+import { SpeakerWaveIcon, SpeakerXMarkIcon } from "@heroicons/react/24/solid";
+
+const SoundToggle = () => {
+  const [mute, setMute] = useState(SpeakerWaveIcon);
+  const handleMute = () => {
+    const audio = document.querySelector("audio");
+  };
+
+  return (
+    <button
+      onClick={(e) => handleMute()}
+      className="bg-antiflash-200 dark:bg-notblack-300 text-notblack-300 dark:text-antiflash-200 h-full aspect-square rounded-full hover:animate-wiggle"
+    >
+      {mute}
+    </button>
+  );
+};
+
+export default SoundToggle;

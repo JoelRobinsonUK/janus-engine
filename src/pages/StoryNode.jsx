@@ -1,7 +1,7 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { storyNodes } from "../StoryContext";
 import { useState, useEffect } from "react";
-import ExtraInfoDialog from "./ExtraInfoDialog";
+import ExtraInfoDialog from "../components/ExtraInfoDialog";
 
 const StoryNode = () => {
   const { id = 0 } = useParams();
@@ -52,6 +52,13 @@ const StoryNode = () => {
           {storyNode.extra && (
             <ExtraInfoDialog id={id} extra={storyNode.extra} />
           )}
+          <audio
+            id="main-theme"
+            className="rounded-full"
+            src="/sounds/storyAmbient.mp3"
+            autoPlay
+            loop
+          ></audio>
         </div>
       )}
 

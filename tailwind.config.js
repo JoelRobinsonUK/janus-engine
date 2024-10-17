@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  darkMode: ['selector', '[data-theme="dark"]'],
+  darkMode: ["selector", '[data-theme="dark"]'],
   theme: {
     colors: {
       matrix: {
@@ -55,14 +55,17 @@ export default {
       },
       keyframes: {
         wiggle: {
-          '0%, 100%': { transform: 'rotate(-8deg)' },
-          '50%': { transform: 'rotate(8deg)' },
-        }
+          "0%, 100%": { transform: "rotate(-8deg)" },
+          "50%": { transform: "rotate(8deg)" },
+        },
       },
       animation: {
-        wiggle: 'wiggle 1s ease-in-out infinite',
-      }
-    }
+        wiggle: "wiggle 1s ease-in-out infinite",
+      },
+      backgroundImage: {
+        credits: "url('/images/credits.gif')",
+      },
+    },
   },
   plugins: [],
 };
