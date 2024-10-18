@@ -6,13 +6,13 @@ const SoundToggle = () => {
 
   const handleMute = () => {
     const audio = document.querySelector("audio");
+    console.log(audio.getAttribute("muted"));
 
-    if (!audio)
-      return;
+    if (!audio) return;
 
     setMute(audio.getAttribute("muted") === true ? false : true);
 
-    audio.setAttribute("muted", mute)
+    audio.setAttribute("muted", mute);
   };
 
   return (

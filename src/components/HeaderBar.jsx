@@ -11,7 +11,6 @@ const HeaderBar = () => {
       <Link to={"/"} className="grow flex">
         <h1 className="text-4xl">The Janus Engine</h1>
       </Link>
-      <SoundToggle />
       <ThemeToggle />
     </header>
   );

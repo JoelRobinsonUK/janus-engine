@@ -20,7 +20,6 @@ const Credits = () => {
           <h2 className="text-5xl font-heading font-bold">{current.name}</h2>
         </>
       )}
-      <audio src="/sounds/credits.mp3" autoPlay></audio>
     </div>
   );
 };

@@ -52,14 +52,14 @@ const StoryNode = () => {
           {storyNode.extra && (
             <ExtraInfoDialog id={id} extra={storyNode.extra} />
           )}
-          <audio
+          {/* <audio
             id="main-theme"
             className="rounded-full"
             src="/sounds/storyAmbient.mp3"
             autoPlay
             loop
-            muted="false"
-          ></audio>
+            muted={false}
+          /> */}
         </div>
       )}
 

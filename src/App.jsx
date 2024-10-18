@@ -1,17 +1,14 @@
 import HeaderBar from "./components/HeaderBar";
-import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import StoryNode from "./pages/StoryNode";
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Ending from "./pages/Ending";
 import Credits from "./pages/Credits";
+import Footer from "./components/buttons/Footer";
+import { useEffect } from "react";
 
 function App() {
-  const [source, setSource] = useState("/sounds/storyAmbient.mp3");
-
   return (
     <>
       <BrowserRouter>
@@ -26,13 +23,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
-        <footer className="text-antiflash-200 text-center p-4 bg-notblack-500 flex flex-col lg:flex-row items-center gap-4">
-          <div className="grow"></div>
-          <h6 className="">Copyright &copy; Joel Robinson 2024</h6>
-          <a href="https://github.com/JoelRobinsonUK/janus-engine">
-            <FontAwesomeIcon className="text-2xl" icon={faGithub} />
-          </a>
-        </footer>
+        <Footer />
       </BrowserRouter>
     </>
   );
