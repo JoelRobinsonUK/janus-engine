@@ -58,6 +58,7 @@ const StoryNode = () => {
             src="/sounds/storyAmbient.mp3"
             autoPlay
             loop
+            muted="false"
           ></audio>
         </div>
       )}
